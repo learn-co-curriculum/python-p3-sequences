@@ -140,7 +140,8 @@ s.count(9)
     <p>How would you retrieve the last two elements of a sequence if you don't
     know the length?</p>
     <div id="dialog_for_link2" class="enhanceable_content dialog" title="Answer">
-        <p>s[-1:-3:-1]</p>
+        <p>Use negative indexing to slice the last two elements of the
+        sequence: s[-1:-3:-1]</p>
         <p><em>Though you can always check the length first with len()!</em></p>
     </div>
     <p class="visible-desktop"><a id="link2" class="Button"
