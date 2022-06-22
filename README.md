@@ -63,8 +63,8 @@ sentence_string = "Strings are immutable sequences of Unicode code points."
 After being defined, sequences can be used as more complex data structures such as
 _queues_ and _stacks_. We will discuss these more later on in this module.
 
-<div style="border: 3px solid #009E94; margin: 15px; padding: 15px; width: 65%;">
-    <p style="color: #009e94; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
+<div style="border: 3px solid #00EEE0; margin: 15px; padding: 15px; width: 65%;">
+    <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
     <p>Which sequence type is surrounded by parentheses?</p>
     <div id="dialog_for_link1" class="enhanceable_content dialog" title="Answer">
         <p>Tuples!</p>
