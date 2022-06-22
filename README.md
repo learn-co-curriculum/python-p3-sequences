@@ -139,12 +139,12 @@ s.count(9)
     <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
     <p>How would you retrieve the last two elements of a sequence if you don't
     know the length?</p>
-    <div id="dialog_for_link1" class="enhanceable_content dialog" title="Answer">
+    <div id="dialog_for_link2" class="enhanceable_content dialog" title="Answer">
         <p>s[-1:-3:-1]</p>
         <p><em>Though you can always check the length first with len()!</em></p>
     </div>
-    <p class="visible-desktop"><a id="link1" class="Button"
-    href="#dialog_for_link1">Check Your Answer</a></p>
+    <p class="visible-desktop"><a id="link2" class="Button"
+    href="#dialog_for_link2">Check Your Answer</a></p>
 </div>
 
 ## Lists
