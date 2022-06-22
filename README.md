@@ -63,11 +63,27 @@ sentence_string = "Strings are immutable sequences of Unicode code points."
 After being defined, sequences can be used as more complex data structures such as
 _queues_ and _stacks_. We will discuss these more later on in this module.
 
-## Python Function Syntax
+<div style="border: 3px solid #009E94; margin: 15px; padding: 15px; width: 65%;">
+    <p style="color: #009e94; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
+    <p>Which sequence type is surrounded by parentheses?</p>
+    <div id="dialog_for_link1" class="enhanceable_content dialog" title="Answer">
+        <p>Tuples!</p>
+    </div>
+    <p class="visible-desktop"><a id="link1" class="Button"
+    href="#dialog_for_link1">Check Your Answer</a></p>
+</div>
+
+## Lists
+
+We've encountered lists in several of our lessons so far. Lists are the most
+common data structure you will see as a Python developer and provide a number
+of different tools for manipulating data.
+
+## Tuples
+
+## Strings
 
 ## Instructions
-
-## Conclusion
 
 ## Resources
 
