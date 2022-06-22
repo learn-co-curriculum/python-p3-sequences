@@ -89,7 +89,8 @@ elements of `s2`.
     > NOTE: Python also supports negative indices. `-1` represents the last
     element in a sequence.
 
-- `s[i:j]` returns a _slice_ of `s` from index `i` to index `j`.
+- `s[i:j]` returns a _slice_ of `s` from index `i` up to (but not including!)
+index `j`.
 
 - `s[i:j:k]` returns a slice of `s` from `i` to `j` with steps of `k` in
 between.
@@ -150,9 +151,10 @@ s.count(9)
 
 ## Lists
 
-We've encountered lists in several of our lessons so far. Lists are the most
-common data structure you will see as a Python developer and provide a number
-of different tools for manipulating data.
+We've encountered lists in several of our lessons so far. As lists are mutable
+and can store any types of data in the same list object, they have many use
+cases and many operations, functions, and methods that allow us to manipulate
+their contents.
 
 ### Sorting Lists
 
@@ -170,6 +172,9 @@ print(my_list)
 # [1, 2, 3, 4, 5, 6]
 ```
 
+`list.reverse()` rearranges the elements of a list so that they are in
+descending order alphanumerically- just the opposite of `list.sort()`.
+
 `sorted()` returns an alphanumerically sorted copy of the original list. This
 function should be used when you want to preserve the integrity of your
 original list, but you need a sorted version for a separate task.
@@ -183,7 +188,60 @@ print(sorted_list)
 # [1, 2, 3, 4, 5, 6]
 ```
 
-### 
+### Adding to Lists
+
+Python allows us to modify any of the elements of a list using their index:
+
+```py
+my_list = [0, 1, 2, 3]
+my_list[0] = None
+print(my_list)
+# [None, 1, 2, 3]
+```
+
+If we want to extend a list, we unfortunately cannot use the same approach:
+
+```py
+my_list = [0, 1, 2, 3]
+my_list[4] = 4
+# IndexError: list assignment index out of range
+```
+
+Python does provide us with two options to extend lists: `list.append()` and
+`list.insert()`.
+
+`list.append()` does exactly what you might expect: it _appends_ its parameter
+to the list.
+
+```py
+my_list = [0, 1, 2, 3]
+my_list.append(4)
+print(my_list)
+# [0, 1, 2, 3, 4]
+```
+
+`list.insert()` provides us a few extra options for extending our list. Where
+`list.append()` can only add to the end of a list, `list.insert()` can insert
+at any index.
+
+`list.insert()` takes two arguments: an index and a value. If a value already
+exists at the index, the new value is inserted before it and everything after
+is moved up by 1. If no value exists at the index, the new value is added to
+the end of the existing list.
+
+```py
+my_list = ['a', 'b', 'c', 'd', 'f']
+my_list.insert(4, 'e')
+print(my_list)
+# ['a', 'b', 'c', 'd', 'e', 'f']
+my_list.insert(1000, 'g')
+print(my_list)
+# ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+```
+
+### Removing from Lists
+
+
 
 ## Tuples
 
