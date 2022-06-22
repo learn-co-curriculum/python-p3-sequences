@@ -1,4 +1,4 @@
-# Lists
+# Sequences
 
 ## Learning Goals
 
