@@ -15,6 +15,9 @@ sequence.
 - **Iterable**: able to be broken down into smaller parts of equal size that
 can be processed in turn. You can loop through any iterable object.
 - **Slice**: a group of neighboring elements in a sequence.
+- **Mutable**: an object that can be changed.
+- **Immutable**: an object that cannot be changed. (_Many immutable objects
+appear mutable because programmers reuse their names for new objects_.)
 - **List**: a mutable data type in Python that can store many types of data.
 The most common data structure in Python.
 - **Tuple**: an immutable data type in Python that can store many types of
