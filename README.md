@@ -288,7 +288,64 @@ print(my_list)
 
 ## Tuples
 
+Tuples do not have any special exclusive methods like lists do. This is because
+tuples are _immutable_. The sequence that they are provided when they are
+created is maintained as long as the tuple object exists.
+
 ## Strings
+
+Python strings have _many_ methods that allow you to access and manipulate
+their individual elements. It's very important to remember while working with
+strings that they are iterable objects (they can be looped through!) and
+they are indexed.
+
+```py
+my_string = 'Hello world!'
+for char in my_string:
+    print(char)
+# H
+# e
+# l
+# l
+# o
+# 
+# w
+# o
+# r
+# l
+# d
+# !
+my_string[0]
+# 'H'
+```
+
+### Changing Case
+
+Strings can be formatted for case using three methods:
+
+- `str.upper()` returns an uppercase version of the original string.
+- `str.lower()` returns a lowercase version of the original string.
+- `str.title()` returns the original string in titlecase (with the first letter
+of each new word capitalized.)
+
+### [Other String Methods][string methods]
+
+There are many other string methods that will allow you to accomplish most
+simple reformatting and conversion operations that you'll want to do. There
+are so many, in fact, that we're providing a [link to a comprehensive list][string
+methods] instead of going in-depth on each one.
+
+The important thing to remember when working with strings is that they are
+**immutable**. All string methods return a new object; they do not replace
+the original.
+
+```py
+my_string = 'hello world!'
+my_string.upper()
+# HELLO WORLD!
+print(my_string)
+# hello world!
+```
 
 ## Instructions
 
@@ -297,5 +354,7 @@ print(my_list)
 - [Common Sequence Operations][common sequence operations]
 - [Sequence Types](https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range)
 - [More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+- [String Methods][string methods]
 
 [common sequence operations]: https://docs.python.org/3/library/stdtypes.html#common-sequence-operations
+[string methods]: https://www.w3schools.com/python/python_ref_string.asp
