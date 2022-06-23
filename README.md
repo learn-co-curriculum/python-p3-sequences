@@ -6,6 +6,23 @@
 several common programming tasks.
 - Execute and test Python code using the Python shell and `pytest`.
 
+## Key Vocab
+
+- **Sequence**: a data structure in which data is stored and accessed in a
+specific order.
+- **Index**: the location, represented by an integer, of an element in a
+sequence.
+- **Iterable**: able to be broken down into smaller parts of equal size that
+can be processed in turn. You can loop through any iterable object.
+- **Slice**: a group of neighboring elements in a sequence.
+- **List**: a mutable data type in Python that can store many types of data.
+The most common data structure in Python.
+- **Tuple**: an immutable data type in Python that can store many types of
+data.
+- **Range**: a data type in Python that stores integers in a fixed pattern.
+- **String**: an immutable data type in Python that stores unicode characters
+in a fixed pattern. Iterable and indexed, just like other sequences.
+
 ## Introduction
 
 A _sequence_ is a simple data structure that is present in all programming
