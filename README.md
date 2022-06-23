@@ -424,8 +424,9 @@ of each new word capitalized.)
 
 There are many other string methods that will allow you to accomplish most
 simple reformatting and conversion operations that you'll want to do. There
-are so many, in fact, that we're providing a [link to a comprehensive list][string
-methods] instead of going in-depth on each one.
+are so many, in fact, that we're providing a
+[link to a comprehensive list][string methods] instead of going in-depth on
+each one.
 
 The important thing to remember when working with strings is that they are
 **immutable**. All string methods return a new object; they do not replace
