@@ -2,9 +2,8 @@
 
 ## Learning Goals
 
-- Utilize Python's `list`, `tuple`, and `str` data types to accomplish
+- Utilize Python's `list`, `tuple`, `range`, and `str` data types to accomplish
 several common programming tasks.
-
 - Execute and test Python code using the Python shell and `pytest`.
 
 ## Introduction
@@ -28,8 +27,8 @@ print(my_list[0])
 # 1
 ```
 
-`list` and `tuple` objects can store any type of data, while `str` objects
-can only store unicode characters.
+`list` and `tuple` objects can store any type of data. `range` objects store
+only integers, and `str` objects can only store unicode characters.
 
 ## When Are Sequences Used?
 
@@ -38,7 +37,7 @@ keep them in order, you should store them in a sequence data structure.
 
 ```py
 # A dynamic sequence of values that allows duplicates
-fibonacci_list = [1, 1, 2, 3, 5, 8, 13, 21]
+fibonacci_list = [0, 1, 1, 2, 3, 5, 8, 13, 21]
 
 # An immutable, ordered sequence of months
 month_tuple = (
@@ -55,6 +54,9 @@ month_tuple = (
     'November',
     'December',
 )
+
+# A simple pattern of numbers
+even_numbers_up_to_100 = range(0, 101, 2)
 
 # A grammatical sentence
 sentence_string = "Strings are immutable sequences of Unicode code points."
@@ -239,6 +241,16 @@ print(my_list)
 # ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 ```
 
+<div style="border: 3px solid #00EEE0; margin: 15px; padding: 15px; width: 65%;">
+    <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
+    <p>Which method allows you to insert characters into the middle of a string?</p>
+    <div id="dialog_for_link3" class="enhanceable_content dialog" title="Answer">
+        <p>list.insert()</p>
+    </div>
+    <p class="visible-desktop"><a id="link3" class="Button"
+    href="#dialog_for_link3">Check Your Answer</a></p>
+</div>
+
 ### Removing from Lists
 
 Python provides us with four (4!!!) options for removing elements from a list.
@@ -292,6 +304,64 @@ Tuples do not have any special exclusive methods like lists do. This is because
 tuples are _immutable_. The sequence that they are provided when they are
 created is maintained as long as the tuple object exists.
 
+## Ranges
+
+Ranges are a very simple type of sequence that is most commonly used in `for`
+loops. Ranges can only contain integers in a fixed pattern. You can build a range
+using the `range()` constructor method and loop through it as if it were a
+standard list.
+
+The range constructor only requires one argument: the end of the range. You may
+have noticed above that this top value is **not** included in the range itself.
+This is similar to how slicing works in lists.
+
+```py
+for n in range(4):
+    print(n)
+
+# 0
+# 1
+# 2
+# 3
+```
+
+There are two optional arguments that you can include when creating a range:
+a start value and a step size.
+
+- `range(4)` gives us `0, 1, 2, 3`
+- `range(1, 4)` gives us `1, 2, 3`
+- `range(0, 4, 2)` gives us `0, 2`
+
+While ranges are very similar to lists, a range is a different data type
+and they exhibit some unique behaviors.
+
+For instance, when we `print()` a list, we can see its contents:
+
+```py
+my_list = [0, 1, 2, 3]
+print(my_list)
+# [0, 1, 2, 3]
+```
+
+When we print a range containing the same elements, here's what we see:
+
+```py
+my_range = range(4)
+print(my_range)
+# range(0, 4)
+```
+
+<div style="border: 3px solid #00EEE0; margin: 15px; padding: 15px; width: 65%;">
+    <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
+    <p>What are two reasons to use ranges?</p>
+    <div id="dialog_for_link4" class="enhanceable_content dialog" title="Answer">
+        <p>1. Quickly building sequences of integers</p>
+        <p>2. Generating iterators for a "for" loop</p>
+    </div>
+    <p class="visible-desktop"><a id="link4" class="Button"
+    href="#dialog_for_link4">Check Your Answer</a></p>
+</div>
+
 ## Strings
 
 Python strings have _many_ methods that allow you to access and manipulate
@@ -303,6 +373,7 @@ they are indexed.
 my_string = 'Hello world!'
 for char in my_string:
     print(char)
+
 # H
 # e
 # l
@@ -315,6 +386,7 @@ for char in my_string:
 # l
 # d
 # !
+
 my_string[0]
 # 'H'
 ```
@@ -349,6 +421,41 @@ print(my_string)
 
 ## Instructions
 
+Time to get some practice! Write your code in the `sequences.py` file in the
+`lib` folder. Run `pytest -x` to check your work. Your goal is to practice
+manipulating sequences with the Python tools you've learned about in this
+lesson and the lessons before.
+
+Write a function `print_fibonacci()` that prints each element of the
+[fibonacci sequence][fibonacci sequence] up to the length provided in the
+function's parameters.
+
+```py
+print_fibonacci(9)
+# 0
+# 1
+# 1
+# 2
+# 3
+# 5
+# 8
+# 13
+# 21
+```
+
+Write a function `reverse_list()` that returns the reverse of the list provided
+in the function's parameters.
+
+```py
+reverse_string([None, 1, 2, 3, 4, 5, 'six'])
+# ['six', 5, 4, 3, 2, 1, None]
+```
+
+> NOTE: There are several ways to accomplish either of these tasks. Conciseness
+> is always ideal, but remember that readable code comes first!
+
+When all of your tests are passing, submit your work using `git`.
+
 ## Resources
 
 - [Common Sequence Operations][common sequence operations]
@@ -358,3 +465,4 @@ print(my_string)
 
 [common sequence operations]: https://docs.python.org/3/library/stdtypes.html#common-sequence-operations
 [string methods]: https://www.w3schools.com/python/python_ref_string.asp
+[fibonacci sequence]: https://www.mathsisfun.com/numbers/fibonacci-sequence.html
