@@ -1,71 +1,42 @@
 #!/usr/bin/env python
 
-from lib.functions import greet_programmer, greet, greet_with_default, \
-                        add, halve
+from lib.sequences import print_fibonacci
 
 import io
 import sys
 
 
-class TestGreetProgrammer:
-    '''function greet_programmer()'''
+class TestPrintFibonacci:
+    '''function print_fibonacci()'''
 
-    def test_greet_programmer(self):
-        '''prints "Hello, programmer!"'''
+    def test_print_fibonacci_zero(self):
+        '''prints empty list when length = 0'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
-        greet_programmer()
+        print_fibonacci(0)
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "Hello, programmer!\n")
+        assert(captured_out.getvalue() == '')
 
-class TestGreet:
-    '''function greet()'''
-
-    def test_greet_programmer(self):
-        '''prints "Hello, {name}!"'''
+    def test_print_fibonacci_one(self):
+        '''prints 0 when length = 1'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
-        greet("Guido")
+        print_fibonacci(1)
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "Hello, Guido!\n")
+        assert(captured_out.getvalue() == '0\n')
 
-class TestGreetWithDefault:
-    '''function greet_with_default()'''
-
-    def test_greet_with_default(self):
-        '''prints "Hello, programmer!"'''
+    def test_print_fibonacci_two(self):
+        '''prints 0\\n1 when length = 2'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
-        greet_with_default()
+        print_fibonacci(2)
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "Hello, programmer!\n")
+        assert(captured_out.getvalue() == '0\n1\n')
 
-    def test_greet_with_default_with_param(self):
-        '''prints "Hello, {name}!"'''
+    def test_print_fibonacci_ten(self):
+        '''prints 0\\n1\\n1\\n2\\n3\\n5\\n8\\n13\\n21\\n34 when length = 10'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
-        greet_with_default("Guido")
+        print_fibonacci(10)
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "Hello, Guido!\n")
-
-class TestAdd:
-    '''function add()'''
-
-    def test_add(self):
-        '''calculates 45 + 55 = 100'''
-        assert(add(45, 55) == 100)
-
-class TestHalve:
-    '''function halve()'''
-
-    def test_halve_string(self):
-        '''ignores non-numerical input'''
-        assert(not halve("Guido"))
-
-    def test_halve_int(self):
-        '''halves integer input'''
-        assert(halve(100) == 50)
-
-    def test_halve_float(self):
-        '''halves float input'''
-        assert(halve(99.0) == 49.5)
+        assert(captured_out.getvalue() == '0\n1\n1\n2\n3\n5\n8\n13\n21\n34\n')

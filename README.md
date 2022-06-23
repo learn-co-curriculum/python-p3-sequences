@@ -443,17 +443,6 @@ print_fibonacci(9)
 # 21
 ```
 
-Write a function `reverse_list()` that returns the reverse of the list provided
-in the function's parameters.
-
-```py
-reverse_string([None, 1, 2, 3, 4, 5, 'six'])
-# ['six', 5, 4, 3, 2, 1, None]
-```
-
-> NOTE: There are several ways to accomplish either of these tasks. Conciseness
-> is always ideal, but remember that readable code comes first!
-
 When all of your tests are passing, submit your work using `git`.
 
 ## Resources
@@ -461,6 +450,7 @@ When all of your tests are passing, submit your work using `git`.
 - [Common Sequence Operations][common sequence operations]
 - [Sequence Types](https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range)
 - [More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+- [Range Docs](https://docs.python.org/3/library/stdtypes.html#ranges)
 - [String Methods][string methods]
 
 [common sequence operations]: https://docs.python.org/3/library/stdtypes.html#common-sequence-operations
