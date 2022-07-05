@@ -6,6 +6,8 @@
 several common programming tasks.
 - Execute and test Python code using the Python shell and `pytest`.
 
+***
+
 ## Key Vocab
 
 - **Sequence**: a data structure in which data is stored and accessed in a
@@ -25,6 +27,8 @@ data.
 - **Range**: a data type in Python that stores integers in a fixed pattern.
 - **String**: an immutable data type in Python that stores unicode characters
 in a fixed pattern. Iterable and indexed, just like other sequences.
+
+***
 
 ## Introduction
 
@@ -94,6 +98,8 @@ _queues_ and _stacks_. We will discuss these more later on in this module.
     <p class="visible-desktop"><a id="link1" class="Button"
     href="#dialog_for_link1">Check Your Answer</a></p>
 </div>
+
+***
 
 ## [Common Sequence Operations][common sequence operations]
 
@@ -170,6 +176,8 @@ s.count(9)
     <p class="visible-desktop"><a id="link2" class="Button"
     href="#dialog_for_link2">Check Your Answer</a></p>
 </div>
+
+***
 
 ## Lists
 
@@ -318,11 +326,15 @@ print(my_list)
 # []
 ```
 
+***
+
 ## Tuples
 
 Tuples do not have any special exclusive methods like lists do. This is because
 tuples are _immutable_. The sequence that they are provided when they are
 created is maintained as long as the tuple object exists.
+
+***
 
 ## Ranges
 
@@ -382,6 +394,8 @@ print(my_range)
     href="#dialog_for_link4">Check Your Answer</a></p>
 </div>
 
+***
+
 ## Strings
 
 Python strings have _many_ methods that allow you to access and manipulate
@@ -440,6 +454,8 @@ print(my_string)
 # hello world!
 ```
 
+***
+
 ## Instructions
 
 Time to get some practice! Write your code in the `sequences.py` file in the
@@ -465,6 +481,8 @@ print_fibonacci(9)
 ```
 
 When all of your tests are passing, submit your work using `git`.
+
+***
 
 ## Resources
 
