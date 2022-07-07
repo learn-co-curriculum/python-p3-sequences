@@ -390,10 +390,16 @@ print(my_range)
 
 <div style="border: 3px solid #00EEE0; margin: 15px; padding: 15px; width: 65%;">
     <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
-    <p>What are two reasons to use ranges?</p>
+    <p>What would <code>range(2, 10, 2) produce?</code></p>
     <div id="dialog_for_link4" class="enhanceable_content dialog" title="Answer">
-        <p>1. Quickly building sequences of integers</p>
-        <p>2. Generating iterators for a "for" loop</p>
+        <p><code>range(2, 10, 2)</code></p>
+        <p><code>range()</code> statements produce <code>range</code> objects.</p>
+        <p>To view the contents, of a <code>range</code> object, you must
+            loop through and print each element <em>or</em> cast the range
+            object to a <code>list</code> or <code>tuple</code> using their class
+            constructors.</p>
+        <p>The contents of this <code>range</code> would be:
+            <code>[2, 4, 6, 8]</code></p>
     </div>
     <p class="visible-desktop"><a id="link4" class="Button"
     href="#dialog_for_link4">Check Your Answer</a></p>
