@@ -169,9 +169,14 @@ s.count(9)
     <p>How would you retrieve the last two elements of a sequence if you don't
     know the length?</p>
     <div id="dialog_for_link2" class="enhanceable_content dialog" title="Answer">
-        <p>Use negative indexing to slice the last two elements of the
-        sequence: s[-1:-3:-1]</p>
-        <p><em>Though you can always check the length first with len()!</em></p>
+        <p>There are several strategies for accessing the ends of sequences:<p>
+        <ul>Use the <code>len()</code> function to find the length of the
+            sequence, then access the last two elements at
+            <code>s[len(s) - 1], s[len(s) - 2].</code></ul>
+        <ul>Use negative indexing to directly access the last two elements of
+            the list: <code>s[-1], s[-2]</code>.</ul>
+        <ul>Use negative indexing to slice the last two elements of the
+            sequence: <code>s[-1:-3:-1]</code>.</ul>
     </div>
     <p class="visible-desktop"><a id="link2" class="Button"
     href="#dialog_for_link2">Check Your Answer</a></p>
