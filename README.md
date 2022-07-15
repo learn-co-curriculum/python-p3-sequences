@@ -207,6 +207,23 @@ print(my_list)
 # [1, 2, 3, 4, 5, 6]
 ```
 
+There are some parameters we can pass into `list.sort()` which can make the
+the function much more versatile.
+
+The key parameter allows us to pass in a function which can serve as a key for the sort
+comparison.
+```py
+my_list = ['This is a long sentence', 'Word', 'z']
+
+# What if we want to sort by the length of the string?
+# We can use the key attribute to tell the sort function to sort using the len function.
+
+my_list.sort(key = len)
+print(my_list)
+#['z', 'Word', 'This is a long sentence']
+
+```
+
 `list.reverse()` rearranges the elements of a list so that they are in
 descending order alphanumerically- just the opposite of `list.sort()`.
 
