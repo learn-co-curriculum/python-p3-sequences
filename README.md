@@ -276,7 +276,7 @@ print(my_list)
 
 <div style="border: 3px solid #00EEE0; margin: 15px; padding: 15px; width: 65%;">
     <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
-    <p>Which method allows you to insert characters into the middle of a string?</p>
+    <p>Which method allows you to insert characters into the middle of a list?</p>
     <div id="dialog_for_link3" class="enhanceable_content dialog" title="Answer">
         <p>list.insert()</p>
     </div>
