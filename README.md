@@ -200,13 +200,13 @@ require that all elements of the list be of the same data type.
 #### `list.sort()` rearranges the elements of a list so that they are in order
 
 ```py
-#if we sort numbers, they will be sorted in ascending order. 
+# if we sort numbers, they will be sorted in ascending order
 my_list = [3, 6, 4, 2, 1, 5]
 my_list.sort()
 print(my_list)
 # [1, 2, 3, 4, 5, 6]
 
-#If we sort string they will be sorted in alphanumeric order. 
+# If we sort strings, they will be sorted in alphanumeric order
 my_list = ['Cabbage', 'Apple', 'Banana', 'Potato']
 my_list.sort()
 print(my_list)
@@ -228,11 +228,11 @@ my_list.sort(key = len)
 print(my_list)
 #['z', 'Word', 'This is a long sentence']
 
-#If we want to sort in descending order we can pass in the reverse parameter into sort.
+# If we want to sort in descending order we can pass in the reverse parameter into sort.
 my_list = ['This is a long sentence', 'Word', 'z']
 my_list.sort(key = len, reverse=True)
 print(my_list)
-#['This is a long sentence', 'Word', 'z']
+# ['This is a long sentence', 'Word', 'z']
 
 ```
 
@@ -251,7 +251,7 @@ def sort_tuple(tuple_value):
 
 my_list.sort(key = sort_tuple)
 print(my_list)
-#[('Steve', 1), ('John', 2), ('Joe', 3)]
+# [('Steve', 1), ('John', 2), ('Joe', 3)]
 ```
 
 #### The `sorted()` function returns a sorted copy of the original list
