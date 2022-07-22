@@ -48,7 +48,7 @@ console.log(my_list[0])
 # Python
 my_list = [1, 2, 3, 4]
 print(my_list[0])
-# 1
+# => 1
 ```
 
 `list` and `tuple` objects can store any type of data. `range` objects store
@@ -89,15 +89,14 @@ sentence_string = "Strings are immutable sequences of Unicode code points."
 After being defined, sequences can be used as more complex data structures such as
 _queues_ and _stacks_. We will discuss these more later on in this module.
 
-<div style="border: 3px solid #00EEE0; margin: 15px; padding: 15px; width: 65%;">
-    <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
-    <p>Which sequence type is surrounded by parentheses?</p>
-    <div id="dialog_for_link1" class="enhanceable_content dialog" title="Answer">
-        <p>Tuples!</p>
-    </div>
-    <p class="visible-desktop"><a id="link1" class="Button"
-    href="#dialog_for_link1">Check Your Answer</a></p>
-</div>
+<details>
+  <summary>
+    <em>Which sequence type is surrounded by parentheses?</em>
+  </summary>
+
+  <h3>Tuples!</h3>
+</details>
+<br/>
 
 ***
 
@@ -139,48 +138,49 @@ Open up the Python shell and test each of these operations for yourself:
 ```py
 s = [4, 6, 3, 9, 3, 5, 1, 2]
 1 in s
-# True
+# => True
 s + s
-# [4, 6, 3, 9, 3, 5, 1, 2, 4, 6, 3, 9, 3, 5, 1, 2]
+# => [4, 6, 3, 9, 3, 5, 1, 2, 4, 6, 3, 9, 3, 5, 1, 2]
 s * 2
-# [4, 6, 3, 9, 3, 5, 1, 2, 4, 6, 3, 9, 3, 5, 1, 2]
+# => [4, 6, 3, 9, 3, 5, 1, 2, 4, 6, 3, 9, 3, 5, 1, 2]
 s[1]
-# 6
+# => 6
 s[-1]
-# 2
+# => 2
 s[2:5]
-# [3, 9, 3]
+# => [3, 9, 3]
 s[2:5:2]
-# [3, 3]
+# => [3, 3]
 len(s)
-# 8
+# =>  8
 min(s)
-# 1
+# => 1
 max(s)
-# 9
+# => 9
 s.index(3)
-# 2
+# => 2
 s.count(9)
-# 1
+# => 1
 ```
 
-<div style="border: 3px solid #00EEE0; margin: 15px; padding: 15px; width: 65%;">
-    <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
-    <p>How would you retrieve the last two elements of a sequence if you don't
-    know the length?</p>
-    <div id="dialog_for_link2" class="enhanceable_content dialog" title="Answer">
-        <p>There are several strategies for accessing the ends of sequences:<p>
-        <ul>Use the <code>len()</code> function to find the length of the
+<details>
+  <summary>
+    <em>How would you retrieve the last two elements of a sequence if you don't
+        know the length?</em>
+  </summary>
+
+  <h3>There are several strategies for accessing the ends of sequences:</h3>
+  <div>
+        <p>Use the <code>len()</code> function to find the length of the
             sequence, then access the last two elements at
-            <code>s[len(s) - 1], s[len(s) - 2].</code></ul>
-        <ul>Use negative indexing to directly access the last two elements of
-            the list: <code>s[-1], s[-2]</code>.</ul>
-        <ul>Use negative indexing to slice the last two elements of the
-            sequence: <code>s[-1:-3:-1]</code>.</ul>
+            <code>s[len(s) - 1], s[len(s) - 2].</code></p>
+        <p>Use negative indexing to directly access the last two elements of
+            the list: <code>s[-1], s[-2]</code>.</p>
+        <p>Use negative indexing to slice the last two elements of the
+            sequence: <code>s[-1:-3:-1]</code>.</p>
     </div>
-    <p class="visible-desktop"><a id="link2" class="Button"
-    href="#dialog_for_link2">Check Your Answer</a></p>
-</div>
+</details>
+<br/>
 
 ***
 
@@ -204,7 +204,7 @@ alphanumerically.
 my_list = [3, 6, 4, 2, 1, 5]
 my_list.sort()
 print(my_list)
-# [1, 2, 3, 4, 5, 6]
+# => [1, 2, 3, 4, 5, 6]
 ```
 
 `list.reverse()` rearranges the elements of a list so that they are in
@@ -218,9 +218,9 @@ original list, but you need a sorted version for a separate task.
 my_list = [3, 6, 4, 2, 1, 5]
 sorted_list = sorted(my_list)
 print(my_list)
-# [3, 6, 4, 2, 1, 5]
+# => [3, 6, 4, 2, 1, 5]
 print(sorted_list)
-# [1, 2, 3, 4, 5, 6]
+# => [1, 2, 3, 4, 5, 6]
 ```
 
 ### Adding to Lists
@@ -231,7 +231,7 @@ Python allows us to modify any of the elements of a list using their index:
 my_list = [0, 1, 2, 3]
 my_list[0] = None
 print(my_list)
-# [None, 1, 2, 3]
+# => [None, 1, 2, 3]
 ```
 
 If we want to extend a list, we unfortunately cannot use the same approach:
@@ -239,7 +239,7 @@ If we want to extend a list, we unfortunately cannot use the same approach:
 ```py
 my_list = [0, 1, 2, 3]
 my_list[4] = 4
-# IndexError: list assignment index out of range
+# => IndexError: list assignment index out of range
 ```
 
 Python does provide us with two options to extend lists: `list.append()` and
@@ -252,7 +252,7 @@ to the list.
 my_list = [0, 1, 2, 3]
 my_list.append(4)
 print(my_list)
-# [0, 1, 2, 3, 4]
+# => [0, 1, 2, 3, 4]
 ```
 
 `list.insert()` provides us a few extra options for extending our list. Where
@@ -268,21 +268,20 @@ the end of the existing list.
 my_list = ['a', 'b', 'c', 'd', 'f']
 my_list.insert(4, 'e')
 print(my_list)
-# ['a', 'b', 'c', 'd', 'e', 'f']
+# => ['a', 'b', 'c', 'd', 'e', 'f']
 my_list.insert(1000, 'g')
 print(my_list)
-# ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+# => ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 ```
 
-<div style="border: 3px solid #00EEE0; margin: 15px; padding: 15px; width: 65%;">
-    <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
-    <p>Which method allows you to insert characters into the middle of a string?</p>
-    <div id="dialog_for_link3" class="enhanceable_content dialog" title="Answer">
-        <p>list.insert()</p>
-    </div>
-    <p class="visible-desktop"><a id="link3" class="Button"
-    href="#dialog_for_link3">Check Your Answer</a></p>
-</div>
+<details>
+  <summary>
+    <em>Which method allows you to insert characters into the middle of a string?</em>
+  </summary>
+
+  <h3><code>list.insert()</code></h3>
+</details>
+<br/>
 
 ### Removing from Lists
 
@@ -300,10 +299,10 @@ indices.
 my_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 del(my_list[0])
 print(my_list)
-# ['b', 'c', 'd', 'e', 'f', 'g']
+# => ['b', 'c', 'd', 'e', 'f', 'g']
 del(my_list[0:3])
 print(my_list)
-# ['e', 'f', 'g']
+# => ['e', 'f', 'g']
 ```
 
 `list.pop()` removes and returns the element at the index passed in as an
@@ -320,15 +319,15 @@ working with a particularly large list in the Python shell.
 ```py
 my_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 my_list.pop()
-# 'g'
+# => 'g'
 my_list.pop(0)
-# 'a'
+# => 'a'
 my_list.remove('f')
 print(my_list)
-# ['b', 'c', 'd', 'e']
+# => ['b', 'c', 'd', 'e']
 my_list.clear()
 print(my_list)
-# []
+# => []
 ```
 
 ***
@@ -356,10 +355,10 @@ This is similar to how slicing works in lists.
 for n in range(4):
     print(n)
 
-# 0
-# 1
-# 2
-# 3
+# => 0
+# => 1
+# => 2
+# => 3
 ```
 
 There are two optional arguments that you can include when creating a range:
@@ -377,7 +376,7 @@ For instance, when we `print()` a list, we can see its contents:
 ```py
 my_list = [0, 1, 2, 3]
 print(my_list)
-# [0, 1, 2, 3]
+# => [0, 1, 2, 3]
 ```
 
 When we print a range containing the same elements, here's what we see:
@@ -385,25 +384,23 @@ When we print a range containing the same elements, here's what we see:
 ```py
 my_range = range(4)
 print(my_range)
-# range(0, 4)
+# => range(0, 4)
 ```
 
-<div style="border: 3px solid #00EEE0; margin: 15px; padding: 15px; width: 65%;">
-    <p style="color: #00EEE0; font-size: 1.5em;"><strong>Check for Understanding</strong></p>
-    <p>What would <code>range(2, 10, 2) produce?</code></p>
-    <div id="dialog_for_link4" class="enhanceable_content dialog" title="Answer">
-        <p><code>range(2, 10, 2)</code></p>
-        <p><code>range()</code> statements produce <code>range</code> objects.</p>
-        <p>To view the contents, of a <code>range</code> object, you must
-            loop through and print each element <em>or</em> cast the range
-            object to a <code>list</code> or <code>tuple</code> using their class
-            constructors.</p>
-        <p>The contents of this <code>range</code> would be:
-            <code>[2, 4, 6, 8]</code></p>
-    </div>
-    <p class="visible-desktop"><a id="link4" class="Button"
-    href="#dialog_for_link4">Check Your Answer</a></p>
-</div>
+<details>
+  <summary>
+    <em>What would <code>range(2, 10, 2) produce?</code></em>
+  </summary>
+
+  <h3><code>range(2, 10, 2)</code></h3>
+  <p><code>range()</code> statements produce <code>range</code> objects.</p>
+  <p>To view the contents, of a <code>range</code> object, you must loop
+     through and print each element <em>or</em> cast the range object to a
+     <code>list</code> or <code>tuple</code> using their class constructors.</p>
+  <p>The contents of this <code>range</code> would be:
+     <code>2, 4, 6, 8</code></p>
+</details>
+<br/>
 
 ***
 
@@ -419,21 +416,21 @@ my_string = 'Hello world!'
 for char in my_string:
     print(char)
 
-# H
-# e
-# l
-# l
-# o
-# 
-# w
-# o
-# r
-# l
-# d
-# !
+# => H
+# => e
+# => l
+# => l
+# => o
+# => 
+# => w
+# => o
+# => r
+# => l
+# => d
+# => !
 
 my_string[0]
-# 'H'
+# => 'H'
 ```
 
 ### Changing Case
@@ -460,9 +457,9 @@ the original.
 ```py
 my_string = 'hello world!'
 my_string.upper()
-# HELLO WORLD!
+# => HELLO WORLD!
 print(my_string)
-# hello world!
+# => hello world!
 ```
 
 ***
@@ -474,21 +471,13 @@ Time to get some practice! Write your code in the `sequences.py` file in the
 manipulating sequences with the Python tools you've learned about in this
 lesson and the lessons before.
 
-Write a function `print_fibonacci()` that prints each element of the
+Write a function `print_fibonacci()` that prints a list of the
 [fibonacci sequence][fibonacci sequence] up to the length provided in the
 function's parameters.
 
 ```py
 print_fibonacci(9)
-# 0
-# 1
-# 1
-# 2
-# 3
-# 5
-# 8
-# 13
-# 21
+# => [0, 1, 1, 2, 3, 5, 8, 13, 21]
 ```
 
 When all of your tests are passing, submit your work using `git`.
