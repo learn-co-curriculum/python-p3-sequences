@@ -196,23 +196,67 @@ Python provides two straightforward solutions for sorting lists: the
 `list.sort()` method and the `sorted()` function. Both of these solutions
 require that all elements of the list be of the same data type.
 
-`list.sort()` rearranges the elements of a list so that they are in order
-alphanumerically.
+#### `list.sort()` rearranges the elements of a list so that they are in order
 
 ```py
+# if we sort numbers, they will be sorted in ascending order
 my_list = [3, 6, 4, 2, 1, 5]
 my_list.sort()
 print(my_list)
 # [1, 2, 3, 4, 5, 6]
+
+# If we sort strings, they will be sorted in alphanumeric order
+my_list = ['Cabbage', 'Apple', 'Banana', 'Potato']
+my_list.sort()
+print(my_list)
+#['Apple', 'Banana', 'Cabbage', 'Potato']
 ```
 
-`list.reverse()` reverses the order of the elements in the list. If we want the
-list in descending order alphanumerically, we would `.sort()` first, then
-`.reverse()`
+There are some parameters we can pass into `list.sort()` which can make the
+the function more versatile.
 
-`sorted()` returns an alphanumerically sorted copy of the original list. This
-function should be used when you want to preserve the integrity of your original
-list, but you need a sorted version for a separate task.
+The `key` parameter allows us to pass in a function which can serve as a key for the sort
+comparison.
+```py
+my_list = ['This is a long sentence', 'Word', 'z']
+
+# What if we want to sort by the length of the string?
+# We can use the key attribute to tell the sort function to sort using the len function.
+
+my_list.sort(key = len)
+print(my_list)
+#['z', 'Word', 'This is a long sentence']
+
+# If we want to sort in descending order we can pass in the reverse parameter into sort.
+my_list = ['This is a long sentence', 'Word', 'z']
+my_list.sort(key = len, reverse=True)
+print(my_list)
+# ['This is a long sentence', 'Word', 'z']
+
+```
+
+We can sort complex data structures using sort `key`
+
+Lets say we have a list of tuples we want to sort using the second key
+```py
+my_list = [('John', 2), ('Steve', 1), ('Joe', 3)]
+
+# We can define a function for the list to sort by the second key
+
+def sort_tuple(tuple_value):
+
+    #return they key we want to sort by
+    return tuple_value[1]
+
+my_list.sort(key = sort_tuple)
+print(my_list)
+# [('Steve', 1), ('John', 2), ('Joe', 3)]
+```
+
+#### The `sorted()` function returns a sorted copy of the original list
+
+This function should be used when you want to preserve the integrity of your
+original list, but you need a sorted version for a separate task.
 
 ```py
 my_list = [3, 6, 4, 2, 1, 5]
@@ -222,6 +266,9 @@ print(my_list)
 print(sorted_list)
 # [1, 2, 3, 4, 5, 6]
 ```
+
+We can pass the `key` and `reverse` parameters into `sorted()` like we did for the `sort`
+function
 
 ### Adding to Lists
 
