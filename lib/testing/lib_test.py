@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from lib.sequences import print_fibonacci
+from sequences import print_fibonacci
 
 import io
 import sys
