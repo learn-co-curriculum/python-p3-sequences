@@ -331,7 +331,7 @@ print(my_list)
 
 <details>
   <summary>
-    <em>Which method allows you to insert characters into the middle of a string?</em>
+    <em>Which method allows you to insert characters into the middle of a list?</em>
   </summary>
 
   <h3><code>list.insert()</code></h3>
