@@ -175,6 +175,7 @@ s.count(9)
             <code>s[len(s) - 1], s[len(s) - 2].</code></p>
         <p>Use negative indexing to directly access the last two elements of
             the list: <code>s[-1], s[-2]</code>.</p>
+        <p>Use negative indexing to access a list of the last two elements <code>s[-2:]</code>.</p>
         <p>Use negative indexing to slice the last two elements of the
             sequence: <code>s[-1:-3:-1]</code>.</p>
     </div>
