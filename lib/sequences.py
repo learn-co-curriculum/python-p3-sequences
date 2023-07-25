@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 def print_fibonacci(length):
-	pass
 	fib_seq = []
 	if length > 0:
 		fib_seq.append(0)
@@ -15,7 +14,6 @@ def print_fibonacci(length):
 # With range **OLD SOLUTION**:
 
 # def print_fibonacci(length):
-#     pass
 #     fibonacci_sequence = []
 #     if length > 0:
 #         fibonacci_sequence.append(0) 
